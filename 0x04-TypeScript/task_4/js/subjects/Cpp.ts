@@ -7,7 +7,7 @@ namespace Subjects {
     getRequirements(){
       return `Here is the list of requirements for Cpp`
     }
-    getAvailableTeacher() {
+    getAvailableTeacher(): string {
       if(!this.teacher.experienceTeachingC) return "No available teacher"
 
       return `Available Teacher: ${this.teacher.firstName}`
