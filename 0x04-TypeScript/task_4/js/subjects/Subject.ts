@@ -1,8 +1,10 @@
 namespace Subjects {
-  export class Subject {
-    teacher: Subjects.Teacher
+  type Teacher = Subjects.Teacher
 
-    setTeacher(teacher: Subjects.Teacher){
+  export class Subject {
+    teacher:Teacher
+
+    setTeacher(teacher:Teacher){
       this.teacher = teacher
     }
   }
