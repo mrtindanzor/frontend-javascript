@@ -38,9 +38,10 @@ class Teacher implements TeacherInterface  {
   }
 }
 
-const createEmployee: createEmployeeFunction = (salary) => {
-  if(typeof salary === "number" && salary < 500) return new Teacher()
-    
+export const createEmployee: createEmployeeFunction = (salary) => {
+  if(typeof salary !== 'number') return
+  if(salary < 500) return new Teacher()
+
   return new Director()
 }
 
