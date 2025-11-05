@@ -13,10 +13,10 @@ interface MinorCredits {
 type Subject = MajorCredits | MinorCredits
 type SumFunction = (subect1: Subject, subect2: Subject) => number
 
-const sumMajorCredits: SumFunction = (subect1, subject2) => {
+export function sumMajorCredits(subect1: Subject, subject2: Subject){
   return subect1.credits + subject2.credits
 }
 
-const sumMinorCredits: SumFunction = (subect1, subject2) => {
+export const sumMinorCredits: SumFunction = (subect1, subject2) => {
   return subect1.credits + subject2.credits
 }
