@@ -1,9 +1,15 @@
-type Credits<T> = {
+interface Credits<T>{
   credits: number
   brand: T
 }
-type MajorCredits = Credits<"Major">
-type MinorCredits = Credits<"Minor">
+interface MajorCredits {
+  credits: number
+  brand: "Major"
+}
+interface MinorCredits {
+  credits: number
+  brand: "Minor"
+}
 type Subject = MajorCredits | MinorCredits
 type SumFunction = (subect1: Subject, subect2: Subject) => number
 

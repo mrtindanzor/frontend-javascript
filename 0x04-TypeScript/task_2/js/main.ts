@@ -2,8 +2,8 @@ type StaffType = {
   workFromHome(): string
   getCoffeeBreak(): string
 }
-type DirectorType = StaffType & { workDirectorTasks(): string }
-type TeacherType = StaffType & { workTeacherTasks(): string }
+interface DirectorType extends StaffType { workDirectorTasks(): string }
+interface TeacherType extends StaffType { workTeacherTasks(): string }
 type createEmployeeFunction = (salary: string | number) => TeacherType | DirectorType
 type IsDirectorFunctionType = (employee: DirectorType | TeacherType) => boolean
 type ExecuteWorkFunction = (employee: DirectorType | TeacherType) => void

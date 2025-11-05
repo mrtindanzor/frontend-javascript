@@ -1,12 +1,12 @@
-type Teacher = {
+interface Teacher {
   firstName: string
   lastName: string
   fullTimeEmployee: boolean
   yearsOfExperience?: number
   location: string
-} & Record<string, unknown>
+} 
 
-type Directors = Teacher & {
+interface Directors extends Teacher {
   numberOfReports: number
 }
 
@@ -16,7 +16,7 @@ const printTeaction: printTeacherFunction = (firstName, lastName) => {
   return `${firstName.charAt(0)}. ${lastName}`
 }
 
-type StudentClassType = {
+interface StudentClassType {
   firstName: string
   lastName: string
   workOnHomeWork(): string
@@ -39,6 +39,4 @@ class StudentClass implements StudentClassType{
   displayName(){
     return this.firstName
   }
-
-
 }
