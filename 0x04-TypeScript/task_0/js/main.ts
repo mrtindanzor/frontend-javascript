@@ -27,9 +27,9 @@ const headingRow = document.createElement("tr")
 headings.forEach(heading => {
   const tHead = document.createElement("th")
   tHead.textContent  = heading
-  headingRow.append(tHead)
+  headingRow.appendChild(tHead)
 })
-table.append(headingRow)
+table.appendChild(headingRow)
 
 studentsList.forEach(student => {
   const studentRow = document.createElement("tr")
@@ -37,8 +37,8 @@ studentsList.forEach(student => {
   for(const [, value] of Object.entries(student)){
     const tData = document.createElement("td")
     tData.textContent = value
-    studentRow.append(tData)
+    studentRow.appendChild(tData)
   }
 
-  table.append(studentRow)
+  table.appendChild(studentRow)
 })
