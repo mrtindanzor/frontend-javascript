@@ -1,5 +1,4 @@
 namespace Subjects {
-  type Teacher = Subjects.Teacher
 
   export class Subject {
     teacher:Teacher
