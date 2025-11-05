@@ -51,7 +51,7 @@ export function isDirector (employee: DirectorInterface | TeacherInterface  ) {
 export const executeWork = (employee: TeacherInterface | DirectorInterface) => {
   if(isDirector(employee)) return employee.workDirectorTasks()
 
-  employee.workTeacherTasks()
+  return employee.workTeacherTasks()
 }
 
 export const teachClass: TeachClassFunction = (todayClass ) => {
