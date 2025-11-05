@@ -1,11 +1,16 @@
-# TypeScript Quick Reference
+# TypeScript Namespace Practice
 
-TypeScript is JavaScript with static typing. Install using `npm install -g typescript` and initialize with `tsc --init`. Compile files using `tsc`.
+This project demonstrates how to use **TypeScript namespaces**, interfaces, and classes across multiple files. It also includes a function that returns different classes based on input.
 
-Basic types:
-```ts
-let age: number = 20
-let name: string = "John"
-let alive: boolean = true
-let ids: number[] = [1, 2, 3]
-let id: number | string = 5
+## Concepts Covered
+- Namespaces and namespace merging
+- Splitting namespaces across multiple files
+- Interfaces and class structure in TypeScript
+- Conditional return types based on input
+- Using `/// <reference />` for multi-file namespace projects
+
+## Example Features
+- `Subjects` namespace for defining teachers and subjects
+- `Teacher` interface and extended teacher types
+- Subject classes such as `Cpp` with custom logic
+- `createEmployee` function that returns `Teacher` or `Director` based on salary
