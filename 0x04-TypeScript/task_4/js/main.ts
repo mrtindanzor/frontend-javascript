@@ -1,27 +1,28 @@
-export const cpp = Subjects.Cpp
-export const java = Subjects.Java
-export const react = Subjects.React
+export const Cpp = Subjects.Cpp
+export const Java = Subjects.Java
+export const React = Subjects.React
+type Teacher = Subjects.Teacher
 
-const cTeacher = {
+const cTeacher: Teacher = {
   firstName: "John",
   lastName: "Doe",
   experienceTeachingC: 10
 }
 
 console.log("c++")
-const cppTeacher = new cpp()
-cppTeacher.setTeacher(cTeacher)
-console.log(cppTeacher.getRequirements())
-console.log(cppTeacher.getAvailableTeacher())
+const cpp = new Cpp()
+cpp.setTeacher(cTeacher)
+console.log(cpp.getRequirements())
+console.log(cpp.getAvailableTeacher())
 
 console.log("Java")
-const javaTeacher = new java()
-javaTeacher.setTeacher(cTeacher)
-console.log(javaTeacher.getRequirements())
-console.log(javaTeacher.getAvailableTeacher())
+const java = new Java()
+java.setTeacher(cTeacher)
+console.log(java.getRequirements())
+console.log(java.getAvailableTeacher())
 
 console.log("React")
-const reactTeacher = new react()
-reactTeacher.setTeacher(cTeacher)
-console.log(reactTeacher.getRequirements())
-console.log(reactTeacher.getAvailableTeacher())
+const react = new React()
+react.setTeacher(cTeacher)
+console.log(react.getRequirements())
+console.log(react.getAvailableTeacher())
